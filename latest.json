@@ -1,0 +1,226 @@
+{
+ "releases": [
+  {
+   "tag_name": "v0.5.7",
+   "draft": false,
+   "prerelease": false,
+   "body": "Quality: SoundCloud / YouTube is now a choice in your ranked list (always last, since Soulseek is tried first), and the Dashboard shows the same list as Settings. Settings: the Soulseek section is one line; the login and folders are tucked under Advanced. Crate-dig edits always download from their own link.",
+   "published_at": "2026-11-10T07:21:43Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.5.7",
+   "assets": [
+    {
+     "name": "SoulSearch.exe",
+     "size": 71027452,
+     "digest": "sha256:e0984a1ffc566901ef547015dd96f3d6853524dc1933d2dce5e015f6d7be2847",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.5.7/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.5.6",
+   "draft": false,
+   "prerelease": false,
+   "body": "Crate Digging: dig deeper with a free AI. Type an artist you've already dug and tick 'Dig deeper' to tell the AI what was already found and where it looked, or press Dig deeper on a saved dig to get the brief, the AI links and a paste box right there. Settings: Quality is now a simple 1st/2nd/3rd/4th choice list (e.g. FLAC, then MP3 320), and FLAC now falls back through every MP3 choice you list. SoundCloud likes that aren't on Soulseek are taken from SoundCloud itself. A missing artist name sends you straight to the name box.",
+   "published_at": "2026-11-09T20:22:07Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.5.6",
+   "assets": [
+    {
+     "name": "SoulSearch.exe",
+     "size": 71026118,
+     "digest": "sha256:39f9f1faaca63f2bcbcabefa88d4b9e24085a1b386a200c754fcec782aa7ac81",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.5.6/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.5.5",
+   "draft": false,
+   "prerelease": false,
+   "body": "Pasting an AI's answer into Crate Digging now works even when ChatGPT's 'Copy response' scrambles it, and you no longer have to retype the artist's name: the answer names them. Messages stay up long enough to read. Crate Digging has an Edit button on saved digs and a tidier track editor (sets fold up, tick a whole set at once). Settings has an Update button beside Check for updates.",
+   "published_at": "2026-11-09T16:40:41Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.5.5",
+   "assets": [
+    {
+     "name": "SoulSearch.exe",
+     "size": 71022624,
+     "digest": "sha256:3ab2b0db2701385240cce6da36cdcb337d48ff959555ecc9e873f358540f81d3",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.5.5/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.5.4",
+   "draft": false,
+   "prerelease": false,
+   "body": "Fetch missing tracklists now works whatever way the artist's name was typed (it failed on lowercase names like 'ben klock'). The app looks better full screen: the menu stays in view while you scroll and the content is centred.",
+   "published_at": "2026-11-09T14:53:05Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.5.4",
+   "assets": [
+    {
+     "name": "SoulSearch.exe",
+     "size": 71018209,
+     "digest": "sha256:ecbcc37aaaa55f0ee1b2efeb2401354c29ec4e54eab9e5a5887b7869da79bce9",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.5.4/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.5.3",
+   "draft": false,
+   "prerelease": false,
+   "body": "Crate Digging finds the tracklists for you. After pasting an AI's answer, press Fetch missing tracklists and SoulSearch looks up each set on MixesDB from your computer. A finished search now ends by asking whether to download (or opens the track editor if you've ticked that). Updates now restart the app on their own and no longer keep an old copy.",
+   "published_at": "2026-11-09T13:53:33Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.5.3",
+   "assets": [
+    {
+     "name": "SoulSearch.exe",
+     "size": 71019352,
+     "digest": "sha256:dc4f30a518cd8dc1c0d7cd1cafb2c9336180cdc7a5993785a0b7ef10ad822f72",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.5.3/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.5.2",
+   "draft": false,
+   "prerelease": false,
+   "body": "Crate Digging is easier. Using a free AI (ChatGPT, Claude, Gemini) is now the first option, with step-by-step buttons: copy the brief, open the AI, paste the answer back. The automatic route is now called \"Automatic: Claude on this computer\". Links open in your real browser. Pasted AI replies with curly quotes now import, and a cut-off or wrong-format reply gets plain advice instead of a technical error.",
+   "published_at": "2026-11-09T11:57:54Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.5.2",
+   "assets": [
+    {
+     "name": "SoulSearch-mac-arm64.zip",
+     "size": 32989048,
+     "digest": "sha256:95a5923df8d89949d183da5a7700b73ad7f3bb2a898e91461ea586566bdff807",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.5.2/SoulSearch-mac-arm64.zip"
+    },
+    {
+     "name": "SoulSearch.exe",
+     "size": 71009692,
+     "digest": "sha256:5ca8927adc1c2948450169ef93e4e0a59e089575202ab6432651159d56dfae76",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.5.2/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.5.1",
+   "draft": false,
+   "prerelease": false,
+   "body": "v0.5.1: Settings is now one page (Setup is merged into it), Download order and a Downloads card on the Dashboard, bitrate drop-downs, one 'Daily sync missed' row with a Sync now button when you're offline, and a more reliable updater. Windows build; the Mac build follows.",
+   "published_at": "2026-11-09T10:04:59Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.5.1",
+   "assets": [
+    {
+     "name": "SoulSearch.exe",
+     "size": 71005938,
+     "digest": "sha256:a7200726325b23127f6d9a806740840fb1ff8954934aee87396ec2f09f689bf3",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.5.1/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.5.0",
+   "draft": false,
+   "prerelease": false,
+   "body": "v0.5.0: the 'What goes first?' card is now two columns, Daily sync is the default priority, plus everything in v0.4.0 (in-app updates, parallel downloads, FLAC options). Windows build; the Mac build follows.",
+   "published_at": "2026-11-03T17:02:25Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.5.0",
+   "assets": [
+    {
+     "name": "SoulSearch-mac-arm64.zip",
+     "size": 33295224,
+     "digest": "sha256:6f68d79b74d574b86fda1a14df902e768e63d1b71e68f6f49a6bec7b7ac9c153",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.5.0/SoulSearch-mac-arm64.zip"
+    },
+    {
+     "name": "SoulSearch.exe",
+     "size": 71004054,
+     "digest": "sha256:2369a5439a6df1860944337da4923eb89d34b5eb87e8f97c43b911ce61e96ea1",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.5.0/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.4.0",
+   "draft": false,
+   "prerelease": false,
+   "body": "v0.4.0: in-app updates (a banner appears when a new version is out, one click installs it), choose what goes first (daily sync / back up / crate dive) with pause-and-continue, parallel downloads for every loop, FLAC options. Windows build; the Mac build follows.",
+   "published_at": "2026-11-03T15:42:46Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.4.0",
+   "assets": [
+    {
+     "name": "SoulSearch-mac-arm64.zip",
+     "size": 33294373,
+     "digest": "sha256:79d489734ec83e2d549345708f0999dc7043d57f6bc27a13dcc959613754cf2a",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.4.0/SoulSearch-mac-arm64.zip"
+    },
+    {
+     "name": "SoulSearch.exe",
+     "size": 71004569,
+     "digest": "sha256:d0ee67a0a55ca9e5015491c95983abbdaf291b970746615581a57add4ee30485",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.4.0/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.3.0",
+   "draft": false,
+   "prerelease": false,
+   "body": "New: parallel downloads. SoulSearch now works on several tracks at once (3 by default, 1 to 6 in Setup, Quality), so big lists finish much sooner. It applies to crate digs, imported lists, Apple Music and Shazam, Spotify, SoundCloud and YouTube syncs, and edits. Also includes the file-type options (MP3, FLAC first, FLAC only) and the SoundCloud backup switch from 0.2.0. Windows build; the Mac build follows.",
+   "published_at": "2026-11-03T11:37:56Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.3.0",
+   "assets": [
+    {
+     "name": "SoulSearch.exe",
+     "size": 70977756,
+     "digest": "sha256:944052d522f78c38b43c9004d6a5c5adfeef2eb509cec5bccea9c5a90f526c83",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.3.0/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.2.0",
+   "draft": false,
+   "prerelease": false,
+   "body": "New: choose your file types (MP3, FLAC first with a 320 kbps MP3 as the backup, or FLAC only) and switch the SoundCloud backup off. Windows build; the Mac build follows.",
+   "published_at": "2026-10-30T11:21:15Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.2.0",
+   "assets": [
+    {
+     "name": "SoulSearch-mac-arm64.zip",
+     "size": 33259016,
+     "digest": "sha256:5a0d611ca1ee9c4a31806f94ee7875c7f694ff0f76ab0b2005db0fc97a0291e2",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.2.0/SoulSearch-mac-arm64.zip"
+    },
+    {
+     "name": "SoulSearch.exe",
+     "size": 69816193,
+     "digest": "sha256:04edc7fe92113b1e0642bcd7ad03b0178835ae08536c26fa905d9327b885f47b",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.2.0/SoulSearch.exe"
+    }
+   ]
+  },
+  {
+   "tag_name": "v0.1.0",
+   "draft": false,
+   "prerelease": false,
+   "body": "First public build. Windows 10/11. Mac build coming (Apple Silicon). Includes Apple Music and Shazam sources.",
+   "published_at": "2026-10-29T08:50:09Z",
+   "html_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/tag/v0.1.0",
+   "assets": [
+    {
+     "name": "SoulSearch-mac-arm64.zip",
+     "size": 33256351,
+     "digest": "sha256:a0edc743c1000a1d493335463ff71def2a3c5b26768e14ba96fa668d43a6d5be",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.1.0/SoulSearch-mac-arm64.zip"
+    },
+    {
+     "name": "SoulSearch.exe",
+     "size": 69814439,
+     "digest": "sha256:3771c49b317e7efa8232f6aa73e0135e1d8e8d7fb114140999601887899b2110",
+     "browser_download_url": "https://github.com/KeeganCostley/soulsearch-downloads/releases/download/v0.1.0/SoulSearch.exe"
+    }
+   ]
+  }
+ ]
+}

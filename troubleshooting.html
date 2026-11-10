@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoulSearch troubleshooting: missing tracks, Rekordbox, FLAC</title>
+<meta name="description" content="Common problems with SoulSearch and what to do about them.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SoulSearch">
+<meta property="og:title" content="SoulSearch troubleshooting: missing tracks, Rekordbox, FLAC">
+<meta property="og:description" content="Common problems with SoulSearch and what to do about them.">
+<meta property="og:url" content="https://getsoulsearch.xyz/troubleshooting.html">
+<meta property="og:image" content="https://getsoulsearch.xyz/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SoulSearch troubleshooting: missing tracks, Rekordbox, FLAC">
+<meta name="twitter:description" content="Common problems with SoulSearch and what to do about them.">
+<meta name="twitter:image" content="https://getsoulsearch.xyz/og.png">
+<link rel="icon" href="icon_32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<main>
+<div class="win">
+  <div class="title"><img src="bird.png" alt="">SoulSearch<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="menu">
+    <a href="index.html">Home</a><a href="peek.html">Take a peek</a><a href="guide.html">Setup guide</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a><a href="contact.html">Contact</a><button class="tip" type="button" data-tip hidden>Tip jar</button>
+  </div>
+  <div class="body">
+    <h1>Troubleshooting</h1>
+    <p>Things that go wrong, and what's usually going on.</p>
+  </div>
+</div>
+<div class="win">
+  <div class="title">Rekordbox<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <p class="q">It synced, but the tracks aren't in Rekordbox.</p>
+    <p>Rekordbox only re-reads the xml file when it opens. Press Reload on the <b>rekordbox xml</b> list or restart it. If they're still missing, check the files are in the folder, then check the Sync page for where the xml is.</p>
+    <p class="q">A playlist shows up in Rekordbox but it's empty.</p>
+    <p>Import it again: right-click the playlist under rekordbox xml, then Import Playlist.</p>
+  </div>
+</div>
+<div class="win">
+  <div class="title">Downloads<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <p class="q">Some tracks say not found.</p>
+    <p>Soulseek didn't have it at your quality when it looked (and SoundCloud / YouTube didn't either, if that's one of your choices). Each source lists its misses under its status on the Sync page: press <b>see which</b>. Try Sync again later, because people come and go on Soulseek. Adding a lower MP3 as another choice in Settings, Quality, finds more.</p>
+    <p class="q">How much data does this use?</p>
+    <p>A lot. A big artist is 1 to 2 GB. Don't start one on a phone hotspot.</p>
+    <p class="q">My internet dropped halfway.</p>
+    <p>It pauses and picks up where it was when the connection is back. Nothing gets marked as missing because of that.</p>
+    <p class="q">Back Up or Sync?</p>
+    <p><b>Sync</b> takes what you've added since you started using SoulSearch. <b>Back Up</b> goes through everything, including what was there before. Anything already in your library is skipped.</p>
+  </div>
+</div>
+<div class="win">
+  <div class="title">Quality<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <p class="q">Can I get FLAC?</p>
+    <p>Yes. Settings, <b>6. Quality</b> (or the Downloads card on the Dashboard). Make <b>FLAC</b> your 1st choice, then add MP3 choices after it as a backup, for example MP3 320 then 256. Stop at FLAC and it never takes an MP3. FLAC can only be the 1st choice.</p>
+    <p class="q">Can I turn off SoundCloud?</p>
+    <p>Yes. In the same Quality boxes, <b>SoundCloud / YouTube</b> is the last choice in the list. Leave it out (or set that box back to blank) and it's never used. If Soulseek doesn't have a track, it's marked as missing and nothing else is tried.</p>
+  </div>
+</div>
+<div class="win">
+  <div class="title">The app<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <p class="q">Windows says it protected my PC.</p>
+    <p>The app isn't signed yet. Click <b>More info</b>, then <b>Run anyway</b>. If your browser said the file isn't commonly downloaded, choose <b>Keep</b>. A Firewall box about slskd? Allow it on Private networks.</p>
+    <p class="q">My Mac won't open it.</p>
+    <p>Drag it into Applications, then right-click it, Open, then Open again. If that fails, System Settings, Privacy &amp; Security, Open Anyway (macOS 15 and newer). If it asks about the Keychain, choose Always Allow. Run it from Applications, not Downloads, or updates won't work.</p>
+    <p class="q">Spotify says the redirect URI is wrong.</p>
+    <p>It has to be exactly <code>http://127.0.0.1:8888/callback</code> in your Spotify app's settings. <code>localhost</code> doesn't work. A 403 error instead? The Spotify account that owns the app needs Premium, and your own name and email should be listed under the app's Settings, User Management. The <a href="guide.html#spotify">setup guide</a> has the steps.</p>
+    <p class="q">Does it work on an Intel Mac?</p>
+    <p>Not yet. Apple Silicon only (M1 and newer).</p>
+    <p class="q">What does it cost?</p>
+    <p>The app is free. Crate digging works with any free AI (ChatGPT, Claude, Gemini) through copy and paste, or automatically if you have Claude Code. Spotify needs a free developer app, and Spotify asks for Premium on the account that owns it.</p>
+  </div>
+</div>
+
+<footer class="foot"><a href="about.html">Responsible use &amp; privacy</a><a href="contact.html">Contact</a><a data-releases href="index.html" hidden>All versions</a></footer>
+</main>
+<dialog id="tip" class="tipbox">
+  <form method="dialog" class="tip-x"><button aria-label="Close">&times;</button></form>
+  <h2>Send a tip</h2>
+  <p>SoulSearch is free. If it saves you time, you can send a tip.</p>
+  <div class="tip-links" hidden></div>
+  <div class="tip-crypto" hidden>
+    <h3>Crypto</h3>
+    <div class="tip-coins" role="group" aria-label="Coin"></div>
+    <label class="tip-net">Network <select></select></label>
+    <img class="tip-qr" width="176" height="176" alt="">
+    <div class="tip-row"><input class="tip-addr" readonly aria-label="Address"><button type="button" class="tip-copy">Copy</button></div>
+    <p class="tip-warn"></p>
+  </div>
+</dialog>
+<div class="bar"><span data-count></span></div>
+<script src="site.js"></script>
+<script src="donate.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

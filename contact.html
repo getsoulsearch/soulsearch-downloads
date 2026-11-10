@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact SoulSearch: report a bug or ask a question</title>
+<meta name="description" content="Report a bug or get in touch about SoulSearch.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SoulSearch">
+<meta property="og:title" content="Contact SoulSearch: report a bug or ask a question">
+<meta property="og:description" content="Report a bug or get in touch about SoulSearch.">
+<meta property="og:url" content="https://getsoulsearch.xyz/contact.html">
+<meta property="og:image" content="https://getsoulsearch.xyz/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact SoulSearch: report a bug or ask a question">
+<meta name="twitter:description" content="Report a bug or get in touch about SoulSearch.">
+<meta name="twitter:image" content="https://getsoulsearch.xyz/og.png">
+<link rel="icon" href="icon_32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<main>
+<div class="win">
+  <div class="title"><img src="bird.png" alt="">SoulSearch<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="menu">
+    <a href="index.html">Home</a><a href="peek.html">Take a peek</a><a href="guide.html">Setup guide</a><a href="troubleshooting.html">Troubleshooting</a><a href="contact.html" aria-current="page">Contact</a><button class="tip" type="button" data-tip hidden>Tip jar</button>
+  </div>
+  <div class="body">
+
+    <h1>Contact</h1>
+
+    <p>Found a bug, got a question, or an idea? Tell me here. For a bug, say what you clicked, what you expected and what happened.</p>
+
+  </div>
+</div>
+<div class="win">
+  <div class="title">Send a message<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <p id="contact-off" hidden>The contact form isn't switched on yet. Check back soon.</p>
+
+    <form id="contact-form" class="contact" hidden>
+
+      <label>What is it?
+
+        <select name="topic"><option>Bug report</option><option>Question</option><option>Idea</option><option>Just saying hi</option></select></label>
+
+      <label>Your message
+
+        <textarea name="message" rows="8" required placeholder="What happened?"></textarea></label>
+
+      <label>Windows or Mac?
+
+        <select name="system"><option>Windows</option><option>Mac</option><option>Not sure</option></select></label>
+
+      <label>App version (bottom of the sidebar, optional)
+
+        <input name="version" placeholder="e.g. 0.5.7 (bottom of the sidebar)"></label>
+
+      <label>Your email, if you'd like a reply (optional)
+
+        <input type="email" name="email" autocomplete="email"></label>
+
+      <input type="text" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="contact-row"><button type="submit">Send</button><span class="contact-status" role="status"></span></div>
+
+      <p class="small">Your email is only used to reply to you.</p>
+
+    </form>
+  </div>
+</div>
+
+<footer class="foot"><a href="about.html">Responsible use &amp; privacy</a><a href="contact.html">Contact</a><a data-releases href="index.html" hidden>All versions</a></footer>
+</main>
+<dialog id="tip" class="tipbox">
+  <form method="dialog" class="tip-x"><button aria-label="Close">&times;</button></form>
+  <h2>Send a tip</h2>
+  <p>SoulSearch is free. If it saves you time, you can send a tip.</p>
+  <div class="tip-links" hidden></div>
+  <div class="tip-crypto" hidden>
+    <h3>Crypto</h3>
+    <div class="tip-coins" role="group" aria-label="Coin"></div>
+    <label class="tip-net">Network <select></select></label>
+    <img class="tip-qr" width="176" height="176" alt="">
+    <div class="tip-row"><input class="tip-addr" readonly aria-label="Address"><button type="button" class="tip-copy">Copy</button></div>
+    <p class="tip-warn"></p>
+  </div>
+</dialog>
+<div class="bar"><span data-count></span></div>
+<script src="site.js"></script>
+<script src="donate.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

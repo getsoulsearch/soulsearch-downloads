@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Take a peek: SoulSearch on screen</title>
+<meta name="description" content="Screens from SoulSearch: the Dashboard, Sync, Crate Digging and Quality settings.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SoulSearch">
+<meta property="og:title" content="Take a peek: SoulSearch on screen">
+<meta property="og:description" content="Screens from SoulSearch: the Dashboard, Sync, Crate Digging and Quality settings.">
+<meta property="og:url" content="https://getsoulsearch.xyz/peek.html">
+<meta property="og:image" content="https://getsoulsearch.xyz/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Take a peek: SoulSearch on screen">
+<meta name="twitter:description" content="Screens from SoulSearch: the Dashboard, Sync, Crate Digging and Quality settings.">
+<meta name="twitter:image" content="https://getsoulsearch.xyz/og.png">
+<link rel="icon" href="icon_32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<main>
+<div class="win">
+  <div class="title"><img src="bird.png" alt="">SoulSearch<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="menu">
+    <a href="index.html">Home</a><a href="peek.html" aria-current="page">Take a peek</a><a href="guide.html">Setup guide</a><a href="troubleshooting.html">Troubleshooting</a><a href="contact.html">Contact</a><button class="tip" type="button" data-tip hidden>Tip jar</button>
+  </div>
+<div class="body peek"><h1>Take a peek</h1><p class="big">The app, in use. Screens from the real thing, with made-up demo data.</p><figure class="shot2"><img src="peek-sync.png" alt="The Sync page: Spotify Liked Songs and SoundCloud, each with Sync and Back Up buttons, plus boxes to add Spotify and YouTube playlists" width="1068" height="542"><figcaption>Sync. Your likes and playlists. Sync takes what's new, Back Up takes everything.</figcaption></figure><figure class="shot2"><img src="peek-dashboard.png" alt="The Dashboard: a Spotify likes sync in progress with a progress bar, the Download order and Downloads cards, and a list of tracks marked done, already had or in progress" width="1068" height="895"><figcaption>Dashboard. What's downloading and how each track went, with your quality choices and how many tracks at once.</figcaption></figure><figure class="shot2"><img src="peek-crate.png" alt="The Crate Digging page: a DJ name box and the free AI route, with Copy research brief, Open ChatGPT, Claude and Gemini buttons and a box to paste the answer" width="1068" height="720"><figcaption>Crate digging. Copy the research brief, paste it into a free AI, paste the answer back.</figcaption></figure><figure class="shot2"><img src="peek-quality.png" alt="The Quality settings: a ranked list of choices, MP3 320, then MP3 256, then MP3 192, then SoundCloud / YouTube, with Tracks at once set to 3" width="876" height="213"><figcaption>Quality. Rank your choices: FLAC or MP3, best first, with SoundCloud / YouTube as the last resort.</figcaption></figure></div>
+</div>
+
+<footer class="foot"><a href="about.html">Responsible use &amp; privacy</a><a href="contact.html">Contact</a><a data-releases href="index.html" hidden>All versions</a></footer>
+</main>
+<dialog id="tip" class="tipbox">
+  <form method="dialog" class="tip-x"><button aria-label="Close">&times;</button></form>
+  <h2>Send a tip</h2>
+  <p>SoulSearch is free. If it saves you time, you can send a tip.</p>
+  <div class="tip-links" hidden></div>
+  <div class="tip-crypto" hidden>
+    <h3>Crypto</h3>
+    <div class="tip-coins" role="group" aria-label="Coin"></div>
+    <label class="tip-net">Network <select></select></label>
+    <img class="tip-qr" width="176" height="176" alt="">
+    <div class="tip-row"><input class="tip-addr" readonly aria-label="Address"><button type="button" class="tip-copy">Copy</button></div>
+    <p class="tip-warn"></p>
+  </div>
+</dialog>
+<div class="bar"><span data-count></span></div>
+<script src="site.js"></script>
+<script src="donate.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

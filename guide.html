@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoulSearch setup guide: Spotify, SoundCloud, YouTube and Rekordbox</title>
+<meta name="description" content="How to set up SoulSearch: first run, Rekordbox folder, Spotify, SoundCloud, YouTube, Apple Music, Shazam and crate digging.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SoulSearch">
+<meta property="og:title" content="SoulSearch setup guide: Spotify, SoundCloud, YouTube and Rekordbox">
+<meta property="og:description" content="How to set up SoulSearch: first run, Rekordbox folder, Spotify, SoundCloud, YouTube, Apple Music, Shazam and crate digging.">
+<meta property="og:url" content="https://getsoulsearch.xyz/guide.html">
+<meta property="og:image" content="https://getsoulsearch.xyz/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SoulSearch setup guide: Spotify, SoundCloud, YouTube and Rekordbox">
+<meta name="twitter:description" content="How to set up SoulSearch: first run, Rekordbox folder, Spotify, SoundCloud, YouTube, Apple Music, Shazam and crate digging.">
+<meta name="twitter:image" content="https://getsoulsearch.xyz/og.png">
+<link rel="icon" href="icon_32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<main>
+<div class="win">
+  <div class="title"><img src="bird.png" alt="">SoulSearch<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="menu">
+    <a href="index.html">Home</a><a href="peek.html">Take a peek</a><a href="guide.html" aria-current="page">Setup guide</a><a href="troubleshooting.html">Troubleshooting</a><a href="contact.html">Contact</a><button class="tip" type="button" data-tip hidden>Tip jar</button>
+  </div>
+  <div class="body">
+    <h1>Setup guide</h1>
+    <p class="after-about">The app's Settings page walks through this in order, top to bottom. This is the same thing with the reasons. Most of it is one-time.</p>
+  </div>
+</div>
+<div class="win">
+  <div class="title">0. First run<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <p id="first-run">Your computer won't recognise the app yet, because it isn't signed. That's normal, and you only do this once.</p>
+    <details data-os="win"><summary>Windows</summary>
+      <ol>
+        <li>Your browser may say <b>SoulSearch.exe isn't commonly downloaded</b>. Choose <b>Keep</b> (in Edge, the three dots, then <b>Keep</b>, then <b>Keep anyway</b>).</li>
+        <li>Open <b>SoulSearch.exe</b>. If Windows says <b>Windows protected your PC</b>, click <b>More info</b>, then <b>Run anyway</b>.</li>
+        <li>A Windows Firewall box may ask about <b>slskd</b>, the Soulseek program SoulSearch runs. Allow it on <b>Private networks</b>.</li>
+      </ol>
+    </details>
+    <details data-os="mac"><summary>Mac</summary>
+      <ol>
+        <li>Unzip the download and drag <b>SoulSearch</b> into <b>Applications</b>. Always open it from Applications, not from Downloads, or updates won't work.</li>
+        <li>Right-click it, choose <b>Open</b>, then <b>Open</b> again.</li>
+        <li>Still blocked? Go to System Settings, <b>Privacy &amp; Security</b>, scroll down and press <b>Open Anyway</b> (macOS 15 and newer).</li>
+        <li>A Keychain box may ask to let SoulSearch use your saved passwords. Choose <b>Always Allow</b>, so it doesn't ask every time.</li>
+      </ol>
+    </details>
+  </div>
+</div>
+<div class="win">
+  <div class="title">1. Folder and downloads<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <h2>Rekordbox folder</h2>
+    <p>Settings, <b>1. Rekordbox folder</b>. Pick the folder where downloads go. Each source gets its own folder next to it, which becomes its own playlist in Rekordbox.</p>
+    <h2>Soulseek</h2>
+    <p>Settings, <b>2. Soulseek</b> is one line. If it says it isn't installed, press <b>Install</b> once. That fetches slskd, the Soulseek program SoulSearch drives, from its official source. Nothing to sign up for: the first time it starts it makes a private login of its own and keeps the password in your computer's secure store. The login boxes are tucked under <b>Advanced</b>, for if you'd rather use an account you already have.</p>
+    <h2>ffmpeg</h2>
+    <p>Settings, <b>3. ffmpeg</b>. Needed for SoundCloud and YouTube downloads, including your SoundCloud likes. One click on <b>Install</b>.</p>
+    <h2>Quality: your order of choice</h2>
+    <p>Settings, <b>6. Quality</b>, is a ranked list: 1st choice, 2nd choice and so on, up to five. The same boxes are on the Dashboard, on the <b>Downloads</b> card.</p>
+    <ul>
+      <li><b>FLAC</b> can only be your 1st choice. FLAC files are three to four times the size of an MP3.</li>
+      <li>Each MP3 after that has to be lower than the one before, for example MP3 320, then 256, then 192.</li>
+      <li>The last choice can be <b>SoundCloud / YouTube</b>. That is what's tried when Soulseek has nothing. Leave it off and a track Soulseek doesn't have is just marked as missing.</li>
+    </ul>
+    <p>Soulseek is always tried first.</p>
+    <h2>Speed</h2>
+    <p><b>Tracks at once</b>, in the same place (and on the Dashboard). The default is 3, so big lists finish about three times sooner. 1 goes one track at a time. Go much above 3 and Soulseek may slow you down.</p>
+    <h2>Which job goes first</h2>
+    <p>The Dashboard has a <b>Download order</b> card. When several things are waiting (a daily sync, a Back Up, a crate dig) you pick which kind goes first, and <b>Switch now</b> moves it up straight away.</p>
+  </div>
+</div>
+<div class="win">
+  <div class="title">2. Your sources<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <h2 id="spotify">Spotify</h2>
+    <p>This one takes a few minutes. Spotify makes everyone register their own free developer app to read their own likes and playlists.</p>
+    <ol>
+      <li>Go to <a href="https://developer.spotify.com/dashboard">developer.spotify.com/dashboard</a>, log in and press <b>Create app</b>. Any name and description.</li>
+      <li>Under <b>Which API/SDKs are you planning to use?</b> tick <b>Web API</b>.</li>
+      <li>Set the Redirect URI to exactly <code>http://127.0.0.1:8888/callback</code> and add it. It has to be the loopback IP address. <code>localhost</code> is not allowed. Tick the terms box and Save.</li>
+      <li>Open the app's <b>Settings</b>, then copy the Client ID and Client Secret into SoulSearch's Settings page (<b>4. Spotify</b>).</li>
+    </ol>
+    <p>Two things to know. New Spotify apps start in &ldquo;development mode&rdquo;, and Spotify requires the <b>account that owns the app to have Spotify Premium</b>. Only the owner needs it, and you are the owner. A development-mode app allows up to 5 people, which is plenty, because it's your own. If Spotify answers with a 403 error, open the app's Settings, then <b>User Management</b>, and add your own Spotify name and email.</p>
+    <h2>SoundCloud</h2>
+    <p>No account or key. Paste your public profile link.</p>
+    <h2>YouTube</h2>
+    <p>No account or key. On the Sync page, add playlists that are public or unlisted. Add as many as you like.</p>
+    <h2>Apple Music and Shazam</h2>
+    <p>On the Sync page, paste a shared Apple Music playlist link, or import a file.</p>
+    <ul>
+      <li><b>Apple Music:</b> in the Music app on a Mac (or iTunes on Windows), click a playlist, then File, Library, <b>Export Playlist</b>. <b>Export Library</b> does everything.</li>
+      <li><b>Shazam:</b> in Shazam on your iPhone, go to My Music, connect Apple Music and turn on Sync your songs. They show up in Apple Music as <b>My Shazam Tracks</b>. Export that playlist the same way.</li>
+    </ul>
+    <p>SoulSearch shows what's in the file before it downloads anything.</p>
+  </div>
+</div>
+<div class="win">
+  <div class="title">3. Rekordbox: connect it to SoulSearch (one time)<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <p>SoulSearch writes a file called <code>rekordbox_export.xml</code>. The Sync page shows where it is. Rekordbox reads your SoulSearch playlists from that file, so you point it there once.</p>
+    <h2>1. Point Rekordbox at the file</h2>
+    <p>In Rekordbox: <b>File</b>, <b>Preferences</b>, <b>Advanced</b>, then the <b>Database</b> tab. Under <b>rekordbox xml</b>, click <b>Browse</b> next to <b>Imported Library</b> and choose <code>rekordbox_export.xml</code>.</p><figure class="shot2 rb" style="max-width:620px"><img src="rb-prefs-xml.png" alt="Rekordbox Preferences, Advanced, Database tab: the Imported Library box under rekordbox xml" width="1002" height="840"><figcaption>Preferences, Advanced, Database. Imported Library is the box that matters.</figcaption></figure>    <h2>2. Make the list show up</h2>
+    <p>Still in Preferences, open <b>View</b>, then the <b>Layout</b> tab. Under <b>Media Browser</b>, tick <b>rekordbox xml</b>. Close Preferences.</p><figure class="shot2 rb" style="max-width:620px"><img src="rb-prefs-layout.png" alt="Rekordbox Preferences, View, Layout tab: the rekordbox xml tick box under Media Browser" width="1002" height="840"><figcaption>Preferences, View, Layout. Tick rekordbox xml.</figcaption></figure>    <h2>3. Open the list</h2>
+    <p>Down the far left edge of the library there is a strip of small icons. Click the <b>last one</b>. The <b>rekordbox xml</b> list opens, with <b>All Tracks</b> and <b>Playlists</b> under it.</p><figure class="shot2 rb" style="max-width:560px"><img src="rb-xml-open.png" alt="The strip of icons at the left of Rekordbox's library with the last icon highlighted, and the rekordbox xml list with its Reload button" width="910" height="738"><figcaption>The last icon opens the list. The circle on the right of the rekordbox xml row is Reload.</figcaption></figure>
+  </div>
+</div>
+<div class="win">
+  <div class="title">4. After every sync: Reload, then import<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <p>Rekordbox only reads the file when it opens, or when you press Reload. If you skip this, new tracks will not show up.</p>
+    <h2>1. Press Reload</h2>
+    <p>On the <b>rekordbox xml</b> row, press the small circle arrow on the right. That is <b>Reload</b>. Restarting Rekordbox does the same thing.</p><figure class="shot2 rb" style="max-width:620px"><img src="rb-xml-playlists.png" alt="The rekordbox xml list with the Reload button marked and the SoulSearch playlists listed" width="814" height="318"><figcaption>Reload is on the rekordbox xml row. Your playlists are under Playlists, in the dj-auto-downloader folder.</figcaption></figure>    <h2>2. Import the playlist</h2>
+    <p>Open <b>Playlists</b>, then <b>dj-auto-downloader</b>. Each source has its own playlist, named after its folder. <b>Right-click</b> the one you want and choose <b>Import Playlist</b>.</p><figure class="shot2 rb" style="max-width:620px"><img src="rb-import.png" alt="Right-clicking a playlist in the rekordbox xml list, with Import Playlist in the menu" width="814" height="408"><figcaption>Right-click a playlist, then Import Playlist.</figcaption></figure>    <h2>3. If it asks to replace</h2>
+    <p>Rekordbox may say a list with the same name already exists and ask to replace it. Choose <b>Yes</b>. That is normal. Your new tracks are now in your collection and in that playlist.</p>
+    <p>Tracks still missing? See <a href="troubleshooting.html">Troubleshooting</a>.</p>
+  </div>
+</div>
+<div class="win">
+  <div class="title">5. Crate digging (optional)<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+  <div class="body">
+    <p>Type a DJ, or one particular set, and SoulSearch finds the tracklists and fetches them. An AI does the research, and there are two ways to do it (Settings, <b>7. Crate digging</b>, or just pick on the Crate Digging page):</p>
+    <ul>
+      <li><b>A free AI. This is the default.</b> Nothing to set up. Press <b>Copy research brief</b>, paste it into ChatGPT, Claude, Gemini or any chat AI (switch on its web search or Deep research first), then paste the answer back and press <b>Import</b>. If the answer stops half-way, tell the AI to continue.</li>
+      <li><b>Automatic, with Claude on this computer.</b> If you pay for Claude and have Claude Code installed, SoulSearch can run the research itself with no copying. Install Claude Code, run <code>claude</code> in a terminal once and sign in with <code>/login</code>, then choose Automatic. The Claude Desktop chat app on its own doesn't include Claude Code, so use the free option for that.</li>
+    </ul>
+    <p>Either way you see what was found before anything downloads. A few extras:</p>
+    <ul>
+      <li><b>Edit the track list before downloading</b>: tick it on the Crate Digging page to tidy the list first.</li>
+      <li><b>Fetch missing tracklists</b>: for sets that came back with no tracks, SoulSearch looks them up on MixesDB.</li>
+      <li><b>Dig deeper</b>: if you've dug that artist before, the free route offers a Dig deeper tick, which tells the AI what's already been found. Saved digs have a <b>Dig deeper</b> button too.</li>
+    </ul>
+  </div>
+</div>
+
+<footer class="foot"><a href="about.html">Responsible use &amp; privacy</a><a href="contact.html">Contact</a><a data-releases href="index.html" hidden>All versions</a></footer>
+</main>
+<dialog id="tip" class="tipbox">
+  <form method="dialog" class="tip-x"><button aria-label="Close">&times;</button></form>
+  <h2>Send a tip</h2>
+  <p>SoulSearch is free. If it saves you time, you can send a tip.</p>
+  <div class="tip-links" hidden></div>
+  <div class="tip-crypto" hidden>
+    <h3>Crypto</h3>
+    <div class="tip-coins" role="group" aria-label="Coin"></div>
+    <label class="tip-net">Network <select></select></label>
+    <img class="tip-qr" width="176" height="176" alt="">
+    <div class="tip-row"><input class="tip-addr" readonly aria-label="Address"><button type="button" class="tip-copy">Copy</button></div>
+    <p class="tip-warn"></p>
+  </div>
+</dialog>
+<div class="bar"><span data-count></span></div>
+<script src="site.js"></script>
+<script src="donate.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

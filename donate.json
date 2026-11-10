@@ -1,0 +1,81 @@
+{
+  "enabled": true,
+  "links": [
+    {
+      "name": "Buy me a coffee",
+      "url": "https://ko-fi.com/soulsearch"
+    }
+  ],
+  "coins": [
+    {
+      "id": "btc",
+      "name": "Bitcoin",
+      "networks": [
+        {
+          "id": "btc",
+          "name": "Bitcoin",
+          "address": "bc1qg2cdp6pf256r6t07kaaqkmyqy7p9xddjxdp5yd"
+        }
+      ]
+    },
+    {
+      "id": "eth",
+      "name": "Ethereum",
+      "networks": [
+        {
+          "id": "eth",
+          "name": "Ethereum",
+          "address": "0x5b4D0A3cC2BF7ba2470d3DAc5627197F260C5eb4"
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "address": "0x5b4D0A3cC2BF7ba2470d3DAc5627197F260C5eb4"
+        }
+      ]
+    },
+    {
+      "id": "bnb",
+      "name": "BNB",
+      "networks": [
+        {
+          "id": "bsc",
+          "name": "BNB Smart Chain (BEP-20)",
+          "address": "0x5b4D0A3cC2BF7ba2470d3DAc5627197F260C5eb4"
+        }
+      ]
+    },
+    {
+      "id": "sol",
+      "name": "Solana",
+      "networks": [
+        {
+          "id": "sol",
+          "name": "Solana",
+          "address": "A6UWQRNUEtwMGhg56vxUz6yjUPEYmbfRs62jkSFYUr1T"
+        }
+      ]
+    },
+    {
+      "id": "usdc",
+      "name": "USDC",
+      "networks": [
+        {
+          "id": "base",
+          "name": "Base",
+          "address": "0x5b4D0A3cC2BF7ba2470d3DAc5627197F260C5eb4"
+        },
+        {
+          "id": "eth",
+          "name": "Ethereum",
+          "address": "0x5b4D0A3cC2BF7ba2470d3DAc5627197F260C5eb4"
+        },
+        {
+          "id": "sol",
+          "name": "Solana",
+          "address": "A6UWQRNUEtwMGhg56vxUz6yjUPEYmbfRs62jkSFYUr1T"
+        }
+      ]
+    }
+  ]
+}

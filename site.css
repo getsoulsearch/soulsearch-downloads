@@ -1,0 +1,215 @@
+/* SoulSearch site: flat page in the app's grey, with the app's navy banner across the top. */
+/* Fonts are served from this site (see fonts/, SIL Open Font License), so visiting makes no request to Google. */
+@font-face { font-family: "IBM Plex Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/ibm-plex-mono-latin-700-normal.woff2") format("woff2"); }
+:root {
+  --face: #d4d0c8; --face-lit: #efeeea; --line: #a9a59c; --grey: #808080;
+  --navy: #000080; --navy-lit: #0a3d91; --ink: #000; --ink-soft: #4a4a4a;
+  --sans: "IBM Plex Sans", system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, "Courier New", monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background-color: var(--face); font: 14px/1.6 var(--sans); }
+main { width: 100%; min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 40px; }
+.win:last-of-type { flex: 1; display: flex; flex-direction: column; }
+a { color: var(--navy); }
+a:visited { color: #551a8b; }
+
+/* The first block is the banner; the others are plain sections with a heading. */
+.win + .win { border-top: 1px solid var(--line); }
+.title { color: var(--ink); font: 700 16px/1.4 var(--mono); padding: 32px clamp(20px, 4vw, 56px) 0; }
+.title img { display: none; }
+.ctl { display: none; }
+.win:first-of-type .title { background: linear-gradient(90deg, var(--navy), var(--navy-lit)); color: #fff;
+  font: 700 13px/1.4 var(--mono); padding: 8px clamp(20px, 4vw, 56px); display: flex; align-items: center; gap: 8px; }
+.win:first-of-type .title img { display: block; width: 18px; height: 18px; image-rendering: pixelated; }
+
+.menu { display: flex; flex-wrap: wrap; gap: 4px; padding: 8px calc(clamp(20px, 4vw, 56px) - 12px); border-bottom: 1px solid var(--line); }
+.menu a { color: var(--ink); text-decoration: none; padding: 2px 12px; font: 500 12px/1.5 var(--mono); }
+.menu a:hover { background: var(--navy); color: #fff; }
+.menu a[aria-current] { font-weight: 700; }
+
+.body { padding: 44px clamp(20px, 4vw, 56px) 48px; }
+.win + .win .body { padding-top: 12px; padding-bottom: 28px; }
+/* Text stays a readable width on a wide screen. */
+.body > :not(.downloads) { max-width: 72ch; }
+
+.note { font: 500 12px/1.6 var(--mono); color: var(--ink-soft); margin: 0; }
+h1 { font: 700 clamp(20px, 2.4vw, 24px)/1.2 var(--mono); margin: 0 0 24px; letter-spacing: -.03em; }
+h2 { font: 600 14px/1.4 var(--sans); margin: 22px 0 4px; color: var(--navy); }
+h2:first-child { margin-top: 0; }
+p { margin: 0 0 10px; }
+.big { font-size: 16px; line-height: 1.55; max-width: 60ch !important; }
+.muted { color: var(--ink-soft); }
+ul, ol { margin: 0 0 10px; padding-left: 22px; }
+li { margin-bottom: 10px; }
+code, kbd { font: 500 13px var(--mono); background: #fff; padding: 1px 5px; border: 1px solid var(--line); }
+
+.downloads { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 4px; }
+.dl { display: block; text-decoration: none; color: var(--ink); text-align: center; width: 230px; padding: 9px 12px;
+  background: transparent; border: 1px solid var(--ink); }
+.dl:visited { color: var(--ink); }
+.dl:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+.dl:hover small { color: #dcdcf0; }
+.dl:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+.dl b { display: block; font: 700 15px/1.3 var(--mono); }
+.dl small { display: block; font: 500 12px/1.5 var(--mono); color: var(--ink-soft); margin-top: 2px; }
+.dl.mine { background: var(--face-lit); border-width: 2px; padding: 8px 11px; }
+.dl.mine:hover { background: var(--navy); }
+.dl.soon { color: #777; border-color: var(--line); pointer-events: none; }
+
+details { margin: 0 0 6px; }
+summary { cursor: pointer; font-weight: 600; }
+details > :not(summary) { margin-top: 6px; }
+.q { font-weight: bold; margin: 14px 0 2px; }
+.q:first-child { margin-top: 0; }
+
+@media (max-width: 560px) {
+  .dl { width: 100%; } h1 { font-size: 22px; }
+}
+
+/* Release info, fixed to the bottom middle of the screen on every page. */
+.bar { position: fixed; left: 0; right: 0; bottom: 0; text-align: center; padding: 9px 12px; background: var(--face);
+  border-top: 1px solid var(--line); font: 500 12px/1.5 var(--mono); color: var(--ink-soft); }
+.bar:has(:empty) { display: none; }
+
+/* About: an icon beside each paragraph, well spaced; downloads in a column on the right. */
+.ico { width: 32px; height: 32px; flex: none; image-rendering: pixelated; margin-top: 2px; }
+.item { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 72px; }
+.item:last-child { margin-bottom: 0; }
+.item .big { margin: 0; }
+.about { margin-bottom: 40px; }
+.body > .home { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 96px; align-items: center; max-width: none; }
+.home .about { margin-bottom: 0; }
+.home .downloads { flex-direction: column; margin: 0; }
+.home .dl { width: 100%; }
+.after-about { margin-top: 0; }
+@media (max-width: 1100px) {
+  .body > .home { grid-template-columns: 1fr; gap: 40px; }
+  .dlpanel { width: 100%; justify-self: stretch; }
+  .item { margin-bottom: 56px; }
+  .body:has(> .home) { padding-top: 48px; }
+}
+@media (max-width: 800px) {
+  .home .dlpanel { order: -1; }
+  .item { margin-bottom: 48px; }
+}
+
+/* The download panel: a quiet card, centred against the text beside it. */
+.dlpanel { background: var(--face-lit); border: 1px solid var(--line); padding: 24px 24px 26px; }
+.dlpanel h2 { margin: 0 0 16px; font: 700 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.home .dlpanel .downloads { gap: 12px; }
+.home .dlpanel .dl { background: var(--face); }
+.home .dlpanel .dl:hover { background: var(--navy); }
+.home .dlpanel .dl.mine { background: #fff; }
+
+/* ---- Balance pass: bigger banner, one shared left/right margin, content centred in the page ---- */
+:root { --gutter: clamp(24px, 5vw, 80px); }
+.win:first-of-type .title { font: 700 24px/1.3 var(--mono); padding: 22px var(--gutter); gap: 16px; }
+.win:first-of-type .title img { width: 40px; height: 40px; }
+.menu { padding: 12px calc(var(--gutter) - 14px); gap: 6px; }
+.menu a { font-size: 14px; padding: 5px 14px; }
+.title { padding-left: var(--gutter); padding-right: var(--gutter); }
+.body { padding-left: var(--gutter); padding-right: var(--gutter); }
+.body:has(> .home) { padding-top: 72px; padding-bottom: 72px; }
+.body > .home { width: 100%; grid-template-columns: minmax(0, 700px) minmax(0, 1fr); gap: 80px; align-items: stretch; }
+.dlpanel { display: flex; flex-direction: column; justify-content: center; padding: 32px; width: 340px; max-width: 100%; justify-self: center; align-self: center; }
+.item { gap: 22px; margin-bottom: 104px; }
+@media (max-width: 800px) {
+  .body > .home { grid-template-columns: 1fr; gap: 40px; }
+  .win:first-of-type .title { font-size: 18px; padding: 16px var(--gutter); }
+  .win:first-of-type .title img { width: 30px; height: 30px; }
+}
+
+/* ---- Tweaks: icons centred on their paragraph, larger text, buttons without a surrounding box ---- */
+.item { align-items: center; }
+.ico { margin-top: 0; }
+.big { font-size: 18px; line-height: 1.6; max-width: 62ch !important; }
+.dlpanel { background: none; border: 0; padding: 0; }
+.home .dlpanel .dl { background: transparent; }
+.home .dlpanel .dl:hover { background: var(--navy); }
+.home .dlpanel .dl.mine { background: var(--face-lit); }
+
+/* ---- Take a peek: screenshots ---- */
+.peek .big { margin-bottom: 40px; }
+.shot2 { margin: 0 0 72px; max-width: 1068px; }
+.shot2 img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.shot2 figcaption { margin-top: 14px; font: 500 12px/1.5 var(--mono); color: var(--ink-soft); }
+.body.peek > .shot2 { max-width: 1068px; }
+
+/* ---- Tip jar: the button in the menu and the pop-up ---- */
+.menu .tip { margin-left: auto; background: transparent; border: 1px solid var(--ink); color: var(--ink); font: 700 12px/1.5 var(--mono); padding: 3px 14px; cursor: pointer; }
+.menu .tip:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+.menu .tip[hidden] { display: none; }
+.tipbox { width: min(480px, calc(100vw - 32px)); padding: 28px 30px 26px; background: var(--face-lit); color: var(--ink); border: 1px solid var(--ink); }
+.tipbox::backdrop { background: rgba(0, 0, 0, .5); }
+.tipbox h2 { margin: 0 0 6px; font: 700 16px/1.4 var(--mono); color: var(--ink); }
+.tipbox h3 { margin: 22px 0 10px; font: 700 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.tipbox p { margin: 0 0 16px; }
+.tipbox [hidden] { display: none; }
+.tip-x { position: absolute; top: 8px; right: 10px; margin: 0; }
+.tip-x button { background: none; border: 0; font: 400 24px/1 var(--sans); color: var(--ink-soft); cursor: pointer; padding: 2px 8px; }
+.tip-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.tip-links a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; background: transparent; border: 1px solid var(--ink); font: 700 13px/1.5 var(--mono); padding: 8px 16px; color: var(--ink); }
+.tip-links a:visited { color: var(--ink); }
+.tip-links a:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+.tip-coins { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.tip-coins button { background: transparent; border: 1px solid var(--ink); font: 700 12px/1.5 var(--mono); padding: 4px 12px; cursor: pointer; color: var(--ink); }
+.tip-coins button[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+.tip-net { display: block; margin-bottom: 18px; font: 500 12px/1.5 var(--mono); }
+.tip-net select { margin-left: 8px; font: 500 13px var(--mono); padding: 3px 8px; border: 1px solid var(--ink); background: #fff; }
+.tip-qr { display: block; margin: 0 auto 18px; width: 176px; height: 176px; image-rendering: pixelated; border: 1px solid var(--line); }
+.tip-row { display: flex; gap: 8px; }
+.tip-addr { flex: 1; min-width: 0; font: 500 12px var(--mono); padding: 8px; border: 1px solid var(--ink); background: #fff; color: var(--ink); }
+.tip-copy { background: transparent; border: 1px solid var(--ink); font: 700 12px/1.5 var(--mono); padding: 0 16px; cursor: pointer; color: var(--ink); }
+.tip-copy:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+.tip-warn { margin: 14px 0 0 !important; font: 500 12px/1.5 var(--mono); color: #a80000; }
+.tip-x button { border-radius: 0; }
+.tipbox button:focus-visible, .tipbox a:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+.shot2.rb { margin: 14px 0 40px; }
+.shot2.rb img { border-color: var(--ink-soft); }
+
+/* contact form */
+.contact label { display: block; margin: 0 0 14px; font: 700 12px/1.5 var(--mono); color: var(--ink); }
+.contact select, .contact input, .contact textarea { display: block; width: 100%; margin-top: 4px; padding: 7px 9px; font: 400 15px/1.4 var(--sans); color: var(--ink); background: #fff; border: 1px solid var(--ink); border-radius: 0; box-sizing: border-box; }
+.contact textarea { resize: vertical; }
+.contact .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.contact-row { display: flex; align-items: center; gap: 14px; }
+.contact button { background: var(--navy); color: #fff; border: 1px solid var(--navy); font: 700 13px/1.5 var(--mono); padding: 8px 22px; cursor: pointer; }
+.contact button:disabled { opacity: .6; cursor: default; }
+.contact-status { font: 500 13px/1.4 var(--mono); }
+
+/* ---- Pre-launch pass: phones, footer, first-run notes, about page ---- */
+@media (max-width: 800px) {
+  .body:has(> .home) { padding-top: 28px; padding-bottom: 40px; }
+  .body { padding-top: 28px; }
+  .item { margin-bottom: 32px; }
+  .big { font-size: 16px; }
+  .dlpanel { width: 100%; justify-self: stretch; }
+  .home .dlpanel { order: 1; }
+}
+@media (max-width: 560px) {
+  /* The icon sits above the paragraph instead of squeezing it. */
+  .item { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .menu { gap: 2px; }
+  .menu a { padding: 5px 10px; }
+  .menu .tip { margin-left: 0; }
+}
+.hint { font: 500 12px/1.5 var(--mono); color: var(--ink-soft); margin: 8px 0 0; }
+.phone-note { display: none; font: 500 13px/1.5 var(--sans); margin: 0 0 14px; padding: 10px 12px; border: 1px solid var(--ink-soft); background: var(--face-lit); }
+.is-phone .phone-note { display: block; }
+.firstrun { margin-top: 20px; max-width: 46ch; }
+.firstrun h3 { font: 700 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 8px; }
+.firstrun details { margin: 0 0 8px; }
+.firstrun ul { margin: 6px 0 0; padding-left: 20px; }
+.firstrun li { margin-bottom: 6px; font-size: 13px; }
+.foot { padding: 20px var(--gutter) 8px; font: 500 12px/1.8 var(--mono); color: var(--ink-soft); }
+.foot a { color: var(--ink-soft); margin-right: 14px; display: inline-block; }
+.foot a:visited { color: var(--ink-soft); }
+.foot[hidden] { display: none; }
+.about-list li { margin-bottom: 8px; }
+.about-list { max-width: 72ch; }
+.body > .phone-note { max-width: none; }
+.dlpanel .phone-note { margin-top: 14px; }
