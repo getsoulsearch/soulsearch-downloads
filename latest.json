@@ -9,6 +9,18 @@
    "html_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/tag/v0.5.8",
    "assets": [
     {
+     "name": "SoulSearch-mac-arm64.zip",
+     "size": 33016278,
+     "digest": "sha256:534cbd07627121c1aa963076933911f2ab90ae191e099c14e16b776a9139338a",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.8/SoulSearch-mac-arm64.zip"
+    },
+    {
+     "name": "SoulSearch-mac-arm64.zip.sha256",
+     "size": 91,
+     "digest": "sha256:9f2e8797eddf1281e480180d38e0f131c156a7cc048724048a702f9a1d12539d",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.8/SoulSearch-mac-arm64.zip.sha256"
+    },
+    {
      "name": "SoulSearch.exe",
      "size": 71036130,
      "digest": "sha256:ffb803533d65d59583eea69db20a0b5f0e120d87e2e71ecb32cd7d01040c2edc",
