@@ -43,7 +43,7 @@ async function loadReleases() {
 }
 
 if (cards.length || bar) {
-  loadReleases()
+  const filled = loadReleases()
     .then((all) => {
       const live = all.filter((x) => !x.draft && !x.prerelease);
       const rel = live[0];
@@ -67,13 +67,21 @@ if (cards.length || bar) {
     .catch(() => { for (const card of cards) card.href = `https://github.com/${REPO}/releases/latest`; });
 
   // The download counter only exists in GitHub's own API, so it is a best-effort extra: asked after the buttons are
-  // already filled in, ignored if GitHub says no, and not shown at all under 100.
+  // already filled in, and left off if GitHub says no. It adds up the app files (not the little .sha256 checks) on
+  // this page and on the old download page (releases up to 0.5.8 were published there, and older copies of the app
+  // still update from it). If that old page is ever deleted, put its last count in OLD_DOWNLOADS instead.
   if (bar) {
-    fetch(`https://api.github.com/repos/${REPO}/releases?per_page=100`, { headers: { Accept: "application/vnd.github+json" } })
-      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
-      .then((all) => {
-        const total = all.reduce((n, x) => n + (x.assets || []).reduce((m, a) => m + (a.download_count || 0), 0), 0);
-        if (total >= 100 && bar.textContent) bar.textContent += ` · ${total.toLocaleString("en-GB")} downloads`;
+    const OLD_REPOS = ["KeeganCostley/soulsearch-downloads"];
+    const OLD_DOWNLOADS = 0;
+    const count = (repo) =>
+      fetch(`https://api.github.com/repos/${repo}/releases?per_page=100`, { headers: { Accept: "application/vnd.github+json" } })
+        .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+        .then((all) => all.reduce((n, x) => n + (x.assets || []).reduce((m, a) => m + (a.name.endsWith(".sha256") ? 0 : a.download_count || 0), 0), 0));
+    Promise.all([count(REPO), ...OLD_REPOS.map((r) => count(r).catch(() => 0))])
+      .then((totals) => filled.then(() => totals))   // after the version line is written
+      .then((totals) => {
+        const total = totals.reduce((n, t) => n + t, OLD_DOWNLOADS);
+        if (total > 0 && bar.textContent) bar.textContent += ` · ${total.toLocaleString("en-GB")} downloads`;
       })
       .catch(() => {});
   }
