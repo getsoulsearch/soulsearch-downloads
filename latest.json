@@ -1,6 +1,28 @@
 {
  "releases": [
   {
+   "tag_name": "v0.5.11",
+   "draft": false,
+   "prerelease": false,
+   "body": "WAV and AIFF: the Quality list now has FLAC, WAV and AIFF as separate choices, alongside MP3 320/256/192 and SoundCloud / YouTube. Rank them in any order you like (up to 7 choices); your current list carries over. New option under Quality: \"Convert FLAC and WAV downloads to AIFF\", for older CDJs that can't play FLAC (keeps 16/24-bit, brings anything above 48 kHz down to 48 kHz; needs ffmpeg). WAV and AIFF files are tagged and added to the Rekordbox list like everything else.\n",
+   "published_at": "2026-11-14T06:44:35Z",
+   "html_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/tag/v0.5.11",
+   "assets": [
+    {
+     "name": "SoulSearch.exe",
+     "size": 71070696,
+     "digest": "sha256:b77d7475b0a8052b42aa48ad012d42bcfc05731a52b5dc200fdec235b674007f",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.11/SoulSearch.exe"
+    },
+    {
+     "name": "SoulSearch.exe.sha256",
+     "size": 81,
+     "digest": "sha256:d22750694cae24a98508c5485976545a95a8445f56d7dc53acb7fec56642e78d",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.11/SoulSearch.exe.sha256"
+    }
+   ]
+  },
+  {
    "tag_name": "v0.5.10",
    "draft": false,
    "prerelease": false,
@@ -38,7 +60,7 @@
    "tag_name": "v0.5.9",
    "draft": false,
    "prerelease": false,
-   "body": "Retry missed: the Sync page can try the tracks a source couldn't get again, one source or all at once (handy after better Wi-Fi or a Quality change). SoundCloud likes follow your Quality list again: SoundCloud's own copy is only used if \"SoundCloud / YouTube\" is in the list. New users get a Finish setup card on the Dashboard, and folders can be picked with Choose\u2026. Settings has an Open logs folder button. Soulseek restarts more calmly and never during downloads, and the sidebar says when it can't connect. Updates work in folders with accented names, settings can't be lost in a crash, and Soulseek and ffmpeg downloads are checked before installing.\n",
+   "body": "Retry missed: the Sync page can try the tracks a source couldn't get again, one source or all at once (handy after better Wi-Fi or a Quality change). SoundCloud likes follow your Quality list again: SoundCloud's own copy is only used if \"SoundCloud / YouTube\" is in the list. New users get a Finish setup card on the Dashboard, and folders can be picked with Choose\u00e2\u20ac\u00a6. Settings has an Open logs folder button. Soulseek restarts more calmly and never during downloads, and the sidebar says when it can't connect. Updates work in folders with accented names, settings can't be lost in a crash, and Soulseek and ffmpeg downloads are checked before installing.\n",
    "published_at": "2026-11-10T17:25:27Z",
    "html_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/tag/v0.5.9",
    "assets": [
