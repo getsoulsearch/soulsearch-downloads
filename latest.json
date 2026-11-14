@@ -9,6 +9,18 @@
    "html_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/tag/v0.5.11",
    "assets": [
     {
+     "name": "SoulSearch-mac-arm64.zip",
+     "size": 36228922,
+     "digest": "sha256:266aa3dfd9bd2633b27c57255e01e4485061933ad042b7bb86dcf1d1f3fa2a2b",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.11/SoulSearch-mac-arm64.zip"
+    },
+    {
+     "name": "SoulSearch-mac-arm64.zip.sha256",
+     "size": 91,
+     "digest": "sha256:bf0fc082c61ac483fe9e6daf90b34ca5e69f6576852cfd3d12437f239d3cc721",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.11/SoulSearch-mac-arm64.zip.sha256"
+    },
+    {
      "name": "SoulSearch.exe",
      "size": 71070696,
      "digest": "sha256:b77d7475b0a8052b42aa48ad012d42bcfc05731a52b5dc200fdec235b674007f",
@@ -60,7 +72,7 @@
    "tag_name": "v0.5.9",
    "draft": false,
    "prerelease": false,
-   "body": "Retry missed: the Sync page can try the tracks a source couldn't get again, one source or all at once (handy after better Wi-Fi or a Quality change). SoundCloud likes follow your Quality list again: SoundCloud's own copy is only used if \"SoundCloud / YouTube\" is in the list. New users get a Finish setup card on the Dashboard, and folders can be picked with Choose\u00e2\u20ac\u00a6. Settings has an Open logs folder button. Soulseek restarts more calmly and never during downloads, and the sidebar says when it can't connect. Updates work in folders with accented names, settings can't be lost in a crash, and Soulseek and ffmpeg downloads are checked before installing.\n",
+   "body": "Retry missed: the Sync page can try the tracks a source couldn't get again, one source or all at once (handy after better Wi-Fi or a Quality change). SoundCloud likes follow your Quality list again: SoundCloud's own copy is only used if \"SoundCloud / YouTube\" is in the list. New users get a Finish setup card on the Dashboard, and folders can be picked with Choose\u2026. Settings has an Open logs folder button. Soulseek restarts more calmly and never during downloads, and the sidebar says when it can't connect. Updates work in folders with accented names, settings can't be lost in a crash, and Soulseek and ffmpeg downloads are checked before installing.\n",
    "published_at": "2026-11-10T17:25:27Z",
    "html_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/tag/v0.5.9",
    "assets": [
