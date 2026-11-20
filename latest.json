@@ -1,6 +1,40 @@
 {
  "releases": [
   {
+   "tag_name": "v0.5.12",
+   "draft": false,
+   "prerelease": false,
+   "body": "Share back with Soulseek: a new Settings card lets you share some of your tracks (50 to 500) with other Soulseek users. Many people on Soulseek serve those who share first, so this makes your downloads faster. Off unless you turn it on. It uses no extra disk space and doesn't change your Rekordbox folders; uploads are limited to 2 at a time with a speed cap (both adjustable). Note: sharing means others can download these files from you, and in some countries sharing copyrighted music can bring notices from rights holders.\n",
+   "published_at": "2026-11-19T16:31:38Z",
+   "html_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/tag/v0.5.12",
+   "assets": [
+    {
+     "name": "SoulSearch-mac-arm64.zip",
+     "size": 36243018,
+     "digest": "sha256:938d956c5fc7d8e72ac03cdaaff9e7ba49ee159f1d3d403504442a064fb938a2",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.12/SoulSearch-mac-arm64.zip"
+    },
+    {
+     "name": "SoulSearch-mac-arm64.zip.sha256",
+     "size": 91,
+     "digest": "sha256:6c45e3e080fcba2c005243d57bfbf9e2e01b340342d9ec7cb5bf3c4b0970b320",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.12/SoulSearch-mac-arm64.zip.sha256"
+    },
+    {
+     "name": "SoulSearch.exe",
+     "size": 71084993,
+     "digest": "sha256:fe98733247335ba0d906b7ccd095084e039c15cf809283e42310071605c5e205",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.12/SoulSearch.exe"
+    },
+    {
+     "name": "SoulSearch.exe.sha256",
+     "size": 81,
+     "digest": "sha256:1dcd6069c48bfb136be5db4ca9a5ffbc4d16ab7b727f103692423106d43242ac",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.12/SoulSearch.exe.sha256"
+    }
+   ]
+  },
+  {
    "tag_name": "v0.5.11",
    "draft": false,
    "prerelease": false,
@@ -72,7 +106,7 @@
    "tag_name": "v0.5.9",
    "draft": false,
    "prerelease": false,
-   "body": "Retry missed: the Sync page can try the tracks a source couldn't get again, one source or all at once (handy after better Wi-Fi or a Quality change). SoundCloud likes follow your Quality list again: SoundCloud's own copy is only used if \"SoundCloud / YouTube\" is in the list. New users get a Finish setup card on the Dashboard, and folders can be picked with Choose\u2026. Settings has an Open logs folder button. Soulseek restarts more calmly and never during downloads, and the sidebar says when it can't connect. Updates work in folders with accented names, settings can't be lost in a crash, and Soulseek and ffmpeg downloads are checked before installing.\n",
+   "body": "Retry missed: the Sync page can try the tracks a source couldn't get again, one source or all at once (handy after better Wi-Fi or a Quality change). SoundCloud likes follow your Quality list again: SoundCloud's own copy is only used if \"SoundCloud / YouTube\" is in the list. New users get a Finish setup card on the Dashboard, and folders can be picked with Choose\u00e2\u20ac\u00a6. Settings has an Open logs folder button. Soulseek restarts more calmly and never during downloads, and the sidebar says when it can't connect. Updates work in folders with accented names, settings can't be lost in a crash, and Soulseek and ffmpeg downloads are checked before installing.\n",
    "published_at": "2026-11-10T17:25:27Z",
    "html_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/tag/v0.5.9",
    "assets": [
