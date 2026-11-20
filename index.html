@@ -20,14 +20,14 @@
 <meta name="twitter:image" content="https://getsoulsearch.xyz/og.png">
 <link rel="icon" href="icon_32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=0512c">
 </head>
 <body>
 <main>
 <div class="win">
   <div class="title"><img src="bird.png" alt="">SoulSearch<span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
   <div class="menu">
-    <a href="index.html" aria-current="page">Home</a><a href="peek.html">Take a peek</a><a href="guide.html">Setup guide</a><a href="troubleshooting.html">Troubleshooting</a><a href="contact.html">Contact</a><a class="xlink" href="https://x.com/getsoulsearch" target="_blank" rel="noopener">@getsoulsearch</a><button class="tip" type="button" data-tip hidden>Tip jar</button>
+    <a href="index.html" aria-current="page">Home</a><a href="peek.html">Take a peek</a><a href="guide.html">Setup guide</a><a href="troubleshooting.html">Troubleshooting</a><a href="contact.html">Contact</a><button class="tip" type="button" data-tip hidden>Tip jar</button>
   </div>
   <div class="body">
     <div class="home">
@@ -40,24 +40,12 @@
         <a class="dl" data-os="mac" href="https://github.com/getsoulsearch/soulsearch-downloads/releases" data-asset="SoulSearch-mac-arm64.zip"><b>Mac</b><small data-meta>Apple Silicon (M1 and newer)</small></a>
       </div>
       <p class="hint">Windows 10 or 11 &middot; Mac with Apple Silicon (M1 and newer)</p>
-      <div class="firstrun" id="first-run">
-        <h3>The first time you open it</h3>
-        <details data-os="win"><summary>Windows</summary>
-          <ul>
-            <li>Your browser may say the file isn't commonly downloaded. Choose <b>Keep</b>.</li>
-            <li>If Windows says <b>Windows protected your PC</b>, click <b>More info</b>, then <b>Run anyway</b>.</li>
-            <li>A Windows Firewall box may ask about <b>slskd</b>. Allow it on <b>Private networks</b>.</li>
-          </ul>
-        </details>
-        <details data-os="mac"><summary>Mac</summary>
-          <ul>
-            <li>Unzip it and drag <b>SoulSearch</b> into <b>Applications</b>. Open it from there, not from Downloads, or updates won't work.</li>
-            <li>Right-click it, choose <b>Open</b>, then <b>Open</b> again.</li>
-            <li>Still blocked? System Settings, Privacy &amp; Security, <b>Open Anyway</b> (macOS 15 and newer).</li>
-            <li>A Keychain box may ask for permission. Choose <b>Always Allow</b>.</li>
-          </ul>
-        </details>
-        <p class="hint">Full steps are in the <a href="guide.html#first-run">setup guide</a>. The app isn't signed yet, which is why your computer is cautious.</p>
+      <p class="hint">First time opening it? Your computer will be cautious because the app isn't signed yet. The <a href="guide.html#first-run">setup guide</a> walks you through it.</p>
+      <div class="latest" id="latest" hidden>
+        <h3>Latest update</h3>
+        <p class="latest-head"><b data-latest-ver></b> <span data-latest-date></span></p>
+        <p data-latest-notes></p>
+        <a data-releases href="index.html" hidden>All versions</a>
       </div>
     </aside>
     </div>
@@ -81,8 +69,8 @@
     <p class="tip-warn"></p>
   </div>
 </dialog>
-<div class="bar"><span data-count></span></div>
-<script src="site.js"></script>
+<div class="bar"><span data-count></span><a class="barx" href="https://x.com/getsoulsearch" target="_blank" rel="noopener">@getsoulsearch</a></div>
+<script src="site.js?v=0512c"></script>
 <script src="donate.js"></script>
 <script src="contact.js"></script>
 </body>

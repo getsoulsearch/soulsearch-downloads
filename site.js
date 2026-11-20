@@ -49,6 +49,20 @@ if (cards.length || bar) {
       const rel = live[0];
       if (!rel) return Promise.reject("no release");
       if (bar) bar.textContent = `${rel.tag_name} · updated ${fmt(rel.published_at)}`;
+      // "Latest update" box on the home page: the newest release's version, date and the start of its notes.
+      const latest = document.getElementById("latest");
+      if (latest && rel.body) {
+        const words = String(rel.body).replace(/\s+/g, " ").trim();
+        let notes = "";
+        for (const s of words.match(/[^.!?]+[.!?]+(\s|$)/g) || [words]) {
+          if (notes && (notes + s).length > 260) break;
+          notes += s;
+        }
+        latest.querySelector("[data-latest-ver]").textContent = rel.tag_name;
+        latest.querySelector("[data-latest-date]").textContent = `· ${fmt(rel.published_at)}`;
+        latest.querySelector("[data-latest-notes]").textContent = notes.trim();
+        latest.hidden = false;
+      }
       // Each button takes the newest release that actually has its file, so a release that is
       // Windows-only for a while doesn't take the Mac button away.
       for (const card of cards) {

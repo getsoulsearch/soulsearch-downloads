@@ -213,3 +213,14 @@ details > :not(summary) { margin-top: 6px; }
 .about-list { max-width: 72ch; }
 .body > .phone-note { max-width: none; }
 .dlpanel .phone-note { margin-top: 14px; }
+
+/* Home page: the newest release under the download buttons. */
+.latest { margin-top: 18px; padding: 14px 16px; background: var(--face); border: 1px solid var(--line); }
+.latest[hidden] { display: none; }
+.latest h3 { margin: 0 0 8px; font: 700 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.latest .latest-head { margin: 0 0 6px; font: 500 13px/1.5 var(--mono); }
+.latest p { margin: 0 0 8px; }
+.latest a { font: 500 12px/1.5 var(--mono); }
+/* The X link in the bottom bar, after the version and download count. */
+.bar .barx { margin-left: 10px; }
+.bar .barx::before { content: "·"; display: inline-block; margin-right: 8px; color: var(--ink-soft); }
