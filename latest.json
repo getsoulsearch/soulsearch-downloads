@@ -1,6 +1,28 @@
 {
  "releases": [
   {
+   "tag_name": "v0.5.13",
+   "draft": false,
+   "prerelease": false,
+   "body": "Deeper crate digs: tick \"Include other names\" to also dig an artist's aliases, \"Also get their own releases\" to add their discography from MusicBrainz, and \"Go wider\" to pull sets from the artists they play most. SoulSearch now reads tracklists from SoundCloud, YouTube and Mixcloud pages itself and finds more sets on Mixcloud. Saved digs have a \"Find more\" button. Missed tracks have a \"Find on Bandcamp\" link. Share back: a 1-500 slider (starts at 5), share a folder you choose, or add individual songs. Updates now live on the Dashboard.\n",
+   "published_at": "2026-11-25T04:17:35Z",
+   "html_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/tag/v0.5.13",
+   "assets": [
+    {
+     "name": "SoulSearch.exe",
+     "size": 71132571,
+     "digest": "sha256:dd085ff5b98a6e690d8a7a4569b1c59b6495eedfb1a119652c54100645c16faf",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.13/SoulSearch.exe"
+    },
+    {
+     "name": "SoulSearch.exe.sha256",
+     "size": 81,
+     "digest": "sha256:2c63e7b4a22158ac36fd273a29a43af299a9c6b4ea42806d09e6708aa67a34ee",
+     "browser_download_url": "https://github.com/getsoulsearch/soulsearch-downloads/releases/download/v0.5.13/SoulSearch.exe.sha256"
+    }
+   ]
+  },
+  {
    "tag_name": "v0.5.12",
    "draft": false,
    "prerelease": false,
