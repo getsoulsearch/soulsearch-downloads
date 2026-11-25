@@ -1,14 +1,9 @@
 /* SoulSearch site: flat page in the app's grey, with the app's navy banner across the top. */
-/* Fonts are served from this site (see fonts/, SIL Open Font License), so visiting makes no request to Google. */
-@font-face { font-family: "IBM Plex Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/ibm-plex-mono-latin-700-normal.woff2") format("woff2"); }
 :root {
   --face: #d4d0c8; --face-lit: #efeeea; --line: #a9a59c; --grey: #808080;
   --navy: #000080; --navy-lit: #0a3d91; --ink: #000; --ink-soft: #4a4a4a;
-  --sans: "IBM Plex Sans", system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, Consolas, "Courier New", monospace;
+  --sans: Tahoma, "MS Sans Serif", Verdana, Geneva, sans-serif;
+  --mono: Tahoma, "MS Sans Serif", Verdana, Geneva, sans-serif;
 }
 * { box-sizing: border-box; }
 body { margin: 0; color: var(--ink); background-color: var(--face); font: 14px/1.6 var(--sans); }
@@ -224,3 +219,136 @@ details > :not(summary) { margin-top: 6px; }
 /* The X link in the bottom bar, after the version and download count. */
 .bar .barx { margin-left: 10px; }
 .bar .barx::before { content: "·"; display: inline-block; margin-right: 8px; color: var(--ink-soft); }
+
+/* ================= App look: Windows-2000 chrome, matching the desktop app ================= */
+:root { --white: #fff; --dark: #404040; --navy-lit: #1084d0; --bevel-out: inset -1px -1px 0 var(--grey), inset 1px 1px 0 var(--face-lit); --bevel-in: inset 1px 1px 0 var(--dark), inset -1px -1px 0 var(--face-lit); }
+body { font: 14px/1.55 var(--sans); }
+code, kbd { font: 13px "Courier New", monospace; border-top: 1px solid var(--grey); border-left: 1px solid var(--grey); border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 1px dotted #000; outline-offset: 1px; box-shadow: 0 0 0 2px #fff, 0 0 0 3px #000; }
+
+/* Title bars: navy to blue, white bold text */
+.title, .win:first-of-type .title { background: linear-gradient(90deg, var(--navy), var(--navy-lit)); color: #fff; font: 700 14px/1.3 var(--sans);
+  padding: 4px var(--gutter); display: flex; align-items: center; gap: 8px; }
+.win:first-of-type .title { font-size: 22px; padding: 10px var(--gutter); gap: 14px; letter-spacing: .01em; }
+.win:first-of-type .title img { width: 36px; height: 36px; }
+.win + .win { border-top: 0; margin: 14px var(--gutter) 0; background: var(--face); border: 1px solid var(--white); border-right-color: var(--dark); border-bottom-color: var(--dark); box-shadow: var(--bevel-out); }
+.win + .win .title { padding: 3px 8px; font-size: 13px; }
+.win + .win .body { padding: 14px 16px 18px; }
+.ctl { display: flex; margin-left: auto; gap: 2px; }
+.ctl i { font: 700 11px/12px var(--sans); font-style: normal; width: 16px; height: 14px; text-align: center; color: #000; background: var(--face);
+  border: 1px solid #fff; border-right-color: var(--dark); border-bottom-color: var(--dark); box-shadow: inset -1px -1px 0 var(--grey); }
+.win:first-of-type .ctl { display: none; }
+
+/* Menu bar */
+.menu { background: var(--face); border-bottom: 1px solid var(--grey); box-shadow: 0 1px 0 #fff; padding: 6px calc(var(--gutter) - 8px); gap: 4px; align-items: center; }
+.menu a, .menu .tip { font: 14px/1.4 var(--sans); }
+.menu a { padding: 6px 14px; min-height: 32px; display: inline-flex; align-items: center; }
+.menu a[aria-current] { font-weight: 700; color: var(--navy); box-shadow: var(--bevel-in); border: 1px solid var(--grey); border-right-color: #fff; border-bottom-color: #fff; }
+.menu a:hover { background: var(--navy); color: #fff; }
+
+/* Headings: bold navy, sentence case */
+h1 { font: 700 clamp(20px, 2.4vw, 24px)/1.2 var(--sans); color: var(--navy); letter-spacing: 0; }
+h2 { font: 700 15px/1.4 var(--sans); color: var(--navy); margin: 20px 0 4px; }
+h2:first-child { margin-top: 0; }
+.dlpanel h2, .latest h3, .firstrun h3, .tipbox h3 { font: 700 14px/1.4 var(--sans); letter-spacing: 0; text-transform: none; color: var(--navy); }
+.note, .hint, .foot, .bar, .shot2 figcaption, .tip-net, .tip-warn, .contact-status { font-family: var(--sans); }
+.note, .hint, .shot2 figcaption { font-size: 12.5px; font-weight: 400; }
+.bar { font-size: 12.5px; font-weight: 400; background: var(--face); border-top: 1px solid #fff; box-shadow: 0 -1px 0 var(--grey); }
+.foot { font-size: 12.5px; font-weight: 400; }
+.foot a { color: var(--navy); }
+.foot a:visited { color: #551a8b; }
+
+/* Bevelled buttons */
+.dl, .menu .tip, .tip-links a, .tip-coins button, .tip-copy, .contact button, .tip-x button {
+  background: var(--face); color: #000; cursor: pointer; border-radius: 0; text-decoration: none;
+  border: 1px solid #fff; border-right-color: var(--dark); border-bottom-color: var(--dark); box-shadow: var(--bevel-out); }
+.dl:visited, .tip-links a:visited { color: #000; }
+.dl:hover, .menu .tip:hover, .tip-links a:hover, .tip-coins button:hover, .tip-copy:hover, .contact button:hover { background: var(--face-lit); color: #000; border-color: #fff; border-right-color: var(--dark); border-bottom-color: var(--dark); }
+.dl:active, .menu .tip:active, .tip-links a:active, .tip-coins button:active, .tip-copy:active, .contact button:active, .tip-x button:active,
+.tip-coins button[aria-pressed="true"] { background: var(--face); color: #000; border-color: var(--dark); border-right-color: #fff; border-bottom-color: #fff; box-shadow: var(--bevel-in); }
+.dl { padding: 9px 12px; min-height: 48px; }
+.dl:active { padding: 10px 12px 8px; }
+.dl b { font: 700 16px/1.3 var(--sans); }
+.dl small { font: 12.5px/1.5 var(--sans); color: var(--ink-soft); }
+.dl:hover small { color: var(--ink-soft); }
+/* The default button: thick dark outline */
+.dl.mine, .dl.mine:hover, .home .dlpanel .dl.mine { background: var(--face); border: 2px solid #000; padding: 8px 11px; box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 var(--grey), inset 2px 2px 0 var(--face-lit); }
+.dl.mine:hover { background: var(--face-lit); }
+.dl.mine:active { box-shadow: var(--bevel-in); padding: 9px 11px 7px; border-color: #000; background: var(--face); }
+.home .dlpanel .dl, .home .dlpanel .dl:hover { background: var(--face); }
+.home .dlpanel .dl:hover { background: var(--face-lit); }
+.dl.soon { color: #6a6a6a; box-shadow: none; }
+.dl:focus-visible { outline: 1px dotted #000; outline-offset: -5px; box-shadow: var(--bevel-out); }
+.menu .tip { font-weight: 700; padding: 6px 16px; min-height: 32px; }
+.tip-links a { font: 700 14px/1.5 var(--sans); padding: 9px 18px; min-height: 40px; }
+.tip-coins button { font: 700 13px/1.5 var(--sans); padding: 6px 14px; min-height: 36px; }
+.tip-copy { font: 700 13px/1.5 var(--sans); min-height: 36px; }
+.contact button { font: 700 14px/1.5 var(--sans); padding: 8px 26px; min-height: 40px; border: 2px solid #000; }
+.contact button:disabled { color: #6a6a6a; opacity: 1; }
+.tip-x button { font: 700 16px/1 var(--sans); color: #000; padding: 4px 8px; min-height: 28px; min-width: 28px; }
+
+/* Cards */
+.dlpanel { background: var(--face); border: 1px solid #fff; border-right-color: var(--dark); border-bottom-color: var(--dark); box-shadow: var(--bevel-out); padding: 16px 18px 18px; }
+.dlpanel h2 { margin: 0 0 12px; }
+.latest { background: var(--face); border: 1px solid #fff; border-right-color: var(--dark); border-bottom-color: var(--dark); box-shadow: var(--bevel-out); }
+.latest .latest-head { font: 13px/1.5 var(--sans); }
+.latest a { font: 13px/1.5 var(--sans); }
+.phone-note { font: 13px/1.5 var(--sans); background: var(--face-lit); border: 1px solid var(--grey); }
+.tipbox { background: var(--face); padding: 0 0 20px; border: 1px solid #fff; border-right-color: var(--dark); border-bottom-color: var(--dark); box-shadow: var(--bevel-out), 2px 2px 0 rgba(0,0,0,.4); }
+.tipbox > :not(form):not(h2) { margin-left: 18px; margin-right: 18px; }
+.tipbox h2 { margin: 0 0 8px; padding: 6px 44px 6px 10px; background: linear-gradient(90deg, var(--navy), var(--navy-lit)); color: #fff; font: 700 14px/1.4 var(--sans); }
+.tipbox > p { margin-top: 12px; }
+.tip-x { top: 3px; right: 4px; }
+.tipbox h3 { margin-top: 18px; }
+.tip-qr { border: 1px solid var(--grey); background: #fff; }
+
+/* Fields: sunken white */
+.tip-net select, .tip-addr, .contact select, .contact input, .contact textarea { font-family: var(--sans); background: #fff; border: 1px solid var(--grey); border-right-color: #fff; border-bottom-color: #fff; box-shadow: var(--bevel-in); }
+.tip-net select { font-size: 13px; }
+.tip-addr { font: 13px var(--sans); }
+.contact label { font: 700 13px/1.5 var(--sans); }
+.contact input, .contact select, .contact textarea { font-size: 14px; }
+.contact-status { font-size: 13px; }
+.shot2 img { border: 1px solid var(--grey); border-right-color: #fff; border-bottom-color: #fff; box-shadow: var(--bevel-in); padding: 2px; background: #fff; }
+.shot2.rb img { border-color: var(--grey); border-right-color: #fff; border-bottom-color: #fff; }
+summary { font-weight: 700; color: var(--navy); }
+
+@media (max-width: 800px) {
+  .win:first-of-type .title { font-size: 18px; padding: 8px var(--gutter); }
+  .win:first-of-type .title img { width: 28px; height: 28px; }
+  .win + .win { margin-left: 12px; margin-right: 12px; }
+  .win + .win .body { padding: 12px; }
+}
+@media (max-width: 560px) {
+  :root { --gutter: 16px; }
+  .menu a { min-height: 40px; padding: 8px 12px; }
+  .menu .tip { min-height: 40px; }
+  .dl { min-height: 52px; }
+  code, kbd { word-break: break-word; }
+}
+
+/* App-sized text: Tahoma only looks like the app (crisp, pixel-snapped) at the app's small sizes. */
+body { font: 12px/1.5 var(--sans); }
+.big, .item .big { font-size: 13px; line-height: 1.55; }
+.hint, .muted, .latest .latest-head, .latest a, .phone-note { font-size: 11px; }
+h1 { font-size: 18px; }
+h2, h3, .dlpanel h2, .latest h3 { font-size: 12px; }
+.title { font-size: 12px; }
+.dl b { font-size: 13px; }
+.dl small { font-size: 11px; }
+.menu a, .menu .tip { font-size: 12px; }
+.bar { font-size: 11px; }
+@media (max-width: 700px) {
+  body { font-size: 13px; }
+  .big, .item .big { font-size: 14px; }
+  .hint, .muted, .latest .latest-head, .latest a, .phone-note { font-size: 12px; }
+}
+.latest p, .latest [data-latest-notes] { font-size: 12px; line-height: 1.5; }
+@media (max-width: 700px) { .latest p, .latest [data-latest-notes] { font-size: 13px; } }
+
+/* Home page: the two "what it does" paragraphs as small app windows, like the setup guide's sections. */
+.item.box { display: block; margin-bottom: 18px; background: var(--face); border: 1px solid var(--white); border-right-color: var(--dark); border-bottom-color: var(--dark); box-shadow: var(--bevel-out); }
+.item.box:last-child { margin-bottom: 0; }
+.boxtitle { display: flex; align-items: center; background: linear-gradient(90deg, var(--navy), var(--navy-lit)); color: #fff; font: 700 12px/1.3 var(--sans); padding: 3px 4px 3px 8px; }
+.boxbody { display: flex; gap: 16px; align-items: flex-start; padding: 14px 16px 16px; }
+.win:first-of-type .boxtitle .ctl { display: flex; }
